@@ -103,7 +103,9 @@ class _StudentFormScreenState extends State<StudentFormScreen> {
 
     if (result is r.Failure) {
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text((result as r.Failure).message), backgroundColor: Colors.red),
+        SnackBar(
+            content: Text((result as r.Failure).message),
+            backgroundColor: Colors.red),
       );
     } else {
       ScaffoldMessenger.of(context).showSnackBar(
@@ -172,7 +174,6 @@ class _StudentFormScreenState extends State<StudentFormScreen> {
           child: ListView(
             padding: const EdgeInsets.all(16),
             children: [
-              // ── Dados básicos ────────────────────────────────────────────────
               const _SectionTitle('Dados do Aluno'),
               const SizedBox(height: 12),
               TextFormField(
@@ -182,8 +183,9 @@ class _StudentFormScreenState extends State<StudentFormScreen> {
                   prefixIcon: Icon(Icons.person),
                 ),
                 textCapitalization: TextCapitalization.words,
-                validator: (v) =>
-                    v == null || v.trim().isEmpty ? 'O nome é obrigatório.' : null,
+                validator: (v) => v == null || v.trim().isEmpty
+                    ? 'O nome é obrigatório.'
+                    : null,
               ),
               const SizedBox(height: 12),
               TextFormField(
@@ -218,7 +220,8 @@ class _StudentFormScreenState extends State<StudentFormScreen> {
                     .map((a) => DropdownMenuItem(value: a, child: Text('$a')))
                     .toList(),
                 onChanged: (v) => setState(() => _anoSelecionado = v),
-                validator: (v) => v == null ? 'Selecione o ano da turma.' : null,
+                validator: (v) =>
+                    v == null ? 'Selecione o ano da turma.' : null,
               ),
               const SizedBox(height: 12),
               InkWell(
@@ -240,8 +243,6 @@ class _StudentFormScreenState extends State<StudentFormScreen> {
                   ),
                 ),
               ),
-
-              // ── Critérios ────────────────────────────────────────────────────
               const SizedBox(height: 24),
               const _SectionTitle('Critérios de Popularidade'),
               const SizedBox(height: 4),
@@ -254,8 +255,6 @@ class _StudentFormScreenState extends State<StudentFormScreen> {
               ),
               const SizedBox(height: 12),
               ...Aluno.criteriosKeys.map(_buildStarRating),
-
-              // ── Pontuação ────────────────────────────────────────────────────
               const SizedBox(height: 16),
               Container(
                 padding: const EdgeInsets.all(12),
@@ -287,7 +286,8 @@ class _StudentFormScreenState extends State<StudentFormScreen> {
                             strokeWidth: 2, color: Colors.white),
                       )
                     : const Icon(Icons.save),
-                label: Text(_editando ? 'Salvar Alterações' : 'Cadastrar Aluno'),
+                label:
+                    Text(_editando ? 'Salvar Alterações' : 'Cadastrar Aluno'),
               ),
               const SizedBox(height: 32),
             ],

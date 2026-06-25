@@ -6,13 +6,11 @@ import 'core/routes/app_router.dart';
 import 'core/theme/app_theme.dart';
 import 'data/services/theme_service.dart';
 
-// Signal global de tema — observado pelo MaterialApp
 final _isDarkMode = signal<bool>(false);
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  // Carrega o tema salvo antes de exibir o app
   final isDark = await ThemeService().carregarTema();
   _isDarkMode.value = isDark;
 
@@ -37,5 +35,4 @@ class PiramidGameApp extends StatelessWidget {
   }
 }
 
-// Expõe o signal para que o ThemeViewModel possa atualizá-lo globalmente
 Signal<bool> get globalIsDarkMode => _isDarkMode;

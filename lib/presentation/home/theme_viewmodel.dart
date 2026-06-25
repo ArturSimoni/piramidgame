@@ -13,7 +13,6 @@ class ThemeViewModel {
     carregarTemaCommand = Command0(_carregarTema);
   }
 
-  // Usa o signal global para que o MaterialApp reaja
   get isDarkMode => globalIsDarkMode;
 
   late final Command0<bool> toggleTemaCommand;

@@ -18,13 +18,11 @@ class AlunoViewModel {
     buscarPorIdCommand = Command1(_buscarPorId);
   }
 
-  // ── Signals ──────────────────────────────────────────────────────────────────
   final alunos = signal<List<Aluno>>([]);
   final ranking = signal<List<Aluno>>([]);
   final alunoSelecionado = signal<Aluno?>(null);
   final errorMessage = signal<String?>(null);
 
-  // ── Commands ─────────────────────────────────────────────────────────────────
   late final Command0<List<Aluno>> carregarAlunosCommand;
   late final Command0<List<Aluno>> calcularRankingCommand;
   late final Command1<bool, Aluno> cadastrarCommand;
@@ -32,7 +30,6 @@ class AlunoViewModel {
   late final Command1<bool, String> removerCommand;
   late final Command1<Aluno?, String> buscarPorIdCommand;
 
-  // ── Ações privadas ───────────────────────────────────────────────────────────
   Future<Result<List<Aluno>>> _carregarAlunos() async {
     final result = await _facade.buscarTodosAlunos();
     if (result is Success) {

@@ -104,7 +104,6 @@ class _StudentDetailScreenState extends State<StudentDetailScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // ── Card de perfil ───────────────────────────────────────────────
               Card(
                 child: Padding(
                   padding: const EdgeInsets.all(16),
@@ -112,8 +111,7 @@ class _StudentDetailScreenState extends State<StudentDetailScreen> {
                     children: [
                       CircleAvatar(
                         radius: 36,
-                        backgroundColor:
-                            Theme.of(context).colorScheme.primary,
+                        backgroundColor: Theme.of(context).colorScheme.primary,
                         child: Text(
                           aluno.nome[0].toUpperCase(),
                           style: const TextStyle(
@@ -131,8 +129,8 @@ class _StudentDetailScreenState extends State<StudentDetailScreen> {
                       if (aluno.apelido.isNotEmpty)
                         Text(
                           '"${aluno.apelido}"',
-                          style: const TextStyle(
-                              color: Colors.grey, fontSize: 14),
+                          style:
+                              const TextStyle(color: Colors.grey, fontSize: 14),
                         ),
                       const SizedBox(height: 8),
                       Wrap(
@@ -154,14 +152,12 @@ class _StudentDetailScreenState extends State<StudentDetailScreen> {
                         decoration: BoxDecoration(
                           color: Colors.amber.withOpacity(0.15),
                           borderRadius: BorderRadius.circular(20),
-                          border:
-                              Border.all(color: Colors.amber, width: 1.5),
+                          border: Border.all(color: Colors.amber, width: 1.5),
                         ),
                         child: Row(
                           mainAxisSize: MainAxisSize.min,
                           children: [
-                            const Icon(Icons.emoji_events,
-                                color: Colors.amber),
+                            const Icon(Icons.emoji_events, color: Colors.amber),
                             const SizedBox(width: 8),
                             Text(
                               'Nível Lenda: ${aluno.nivelLenda} pts',
@@ -177,10 +173,7 @@ class _StudentDetailScreenState extends State<StudentDetailScreen> {
                   ),
                 ),
               ),
-
               const SizedBox(height: 16),
-
-              // ── Critérios ────────────────────────────────────────────────────
               Card(
                 child: Padding(
                   padding: const EdgeInsets.all(16),
@@ -196,16 +189,13 @@ class _StudentDetailScreenState extends State<StudentDetailScreen> {
                         ),
                       ),
                       const Divider(height: 20),
-                      ...Aluno.criteriosKeys.map((key) =>
-                          _buildCriterio(key, aluno.notas[key] ?? 1)),
+                      ...Aluno.criteriosKeys.map(
+                          (key) => _buildCriterio(key, aluno.notas[key] ?? 1)),
                     ],
                   ),
                 ),
               ),
-
               const SizedBox(height: 20),
-
-              // ── Ações ────────────────────────────────────────────────────────
               Row(
                 children: [
                   Expanded(
