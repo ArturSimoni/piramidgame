@@ -1,5 +1,3 @@
-// lib/core/patterns/command.dart
-
 import 'package:signals/signals.dart';
 import 'result.dart';
 

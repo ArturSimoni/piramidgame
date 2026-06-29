@@ -1,5 +1,3 @@
-// lib/presentation/ranking/ranking_screen.dart
-
 import 'package:flutter/material.dart';
 import 'package:signals/signals_flutter.dart';
 import '../student/aluno_viewmodel.dart';

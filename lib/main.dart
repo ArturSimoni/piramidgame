@@ -1,5 +1,3 @@
-// lib/main.dart
-
 import 'package:flutter/material.dart';
 import 'package:signals/signals_flutter.dart';
 import 'core/routes/app_router.dart';

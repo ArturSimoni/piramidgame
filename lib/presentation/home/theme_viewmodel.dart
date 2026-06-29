@@ -1,5 +1,3 @@
-// lib/presentation/home/theme_viewmodel.dart
-
 import '../../core/patterns/command.dart';
 import '../../core/patterns/result.dart';
 import '../../domain/facades/theme_facade.dart';

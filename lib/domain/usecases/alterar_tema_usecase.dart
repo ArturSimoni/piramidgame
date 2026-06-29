@@ -1,5 +1,3 @@
-// lib/domain/usecases/alterar_tema_usecase.dart
-
 import '../../data/services/theme_service.dart';
 import '../../core/patterns/result.dart';
 

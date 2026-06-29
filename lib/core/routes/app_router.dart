@@ -1,5 +1,3 @@
-// lib/core/routes/app_router.dart
-
 import 'package:go_router/go_router.dart';
 import '../../presentation/splash/splash_screen.dart';
 import '../../presentation/home/home_screen.dart';

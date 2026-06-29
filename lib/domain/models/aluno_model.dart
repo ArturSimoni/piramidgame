@@ -1,5 +1,3 @@
-// lib/domain/models/aluno_model.dart
-
 class Aluno {
   final String id;
   final String nome;

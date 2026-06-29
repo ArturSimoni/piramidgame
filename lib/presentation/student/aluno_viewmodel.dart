@@ -1,5 +1,3 @@
-// lib/presentation/student/aluno_viewmodel.dart
-
 import 'package:signals/signals.dart';
 import '../../core/patterns/command.dart';
 import '../../core/patterns/result.dart';

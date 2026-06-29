@@ -1,5 +1,3 @@
-// lib/domain/usecases/remover_aluno_usecase.dart
-
 import '../../core/patterns/result.dart';
 import '../../data/repositories/aluno_repository.dart';
 

@@ -1,5 +1,3 @@
-// lib/core/patterns/result.dart
-
 abstract class Result<T> {
   const Result();
 }
